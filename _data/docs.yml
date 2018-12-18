@@ -1,0 +1,45 @@
+- title: Overview
+  docs:
+  - icec
+  - widgets
+  - libraries
+  - font-awesome
+
+- title: Getting Started
+  docs:
+  - home
+  - clonerepo
+  - startserver
+  - login
+  - navigation
+  - customjs
+  - tips
+
+- title: Hello World
+  docs:
+  - helloworld-home
+
+- title: CSS Grid
+  docs:
+  - cssgrid-home
+  - cssgrid-deploy
+
+- title: Vimeo
+  docs:
+  - vimeo-home
+  - vimeo-deploy
+
+- title: Box
+  docs:
+  - box-home
+  - box-deploy
+  - box-sample
+
+- title: Business Card
+  docs:
+  - businessCard-home
+  - businessCard-deploy
+
+- title: More Info
+  docs:
+  - more-home
