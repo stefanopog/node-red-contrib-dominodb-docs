@@ -1,8 +1,9 @@
 - title: Overview
   docs:
-  - icec
+  - fullDoc-Intro
   - widgets
   - libraries
+  - icec
   - font-awesome
 
 - title: Getting Started

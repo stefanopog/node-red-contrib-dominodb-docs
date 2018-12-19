@@ -5,7 +5,7 @@ permalink: /docs/helloworld-home/
 
 <a name="top"/>
 
-The `custom.js` includes a widget called helloWorld.  The complete code for the widget is right inside of the `custom.js`.  This is not the approach that we will take to create and deploy widgets moving forward; however, it helps in understanding what is required to `register` a custom widget in ICEC.  
+AAA ~~The~~ `custom.js` includes a widget called helloWorld.  The complete code for the widget is right inside of the `custom.js`.  This is not the approach that we will take to create and deploy widgets moving forward; however, it helps in understanding what is required to `register` a custom widget in ICEC.  
 
 As seen in the previous topic, we added a set of arrays and script code in our init section to facilitate the registration process and we will use that process moving forward. 
 
