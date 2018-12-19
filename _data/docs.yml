@@ -1,6 +1,7 @@
-- title: Overview
+- title: Simplify the use and the access of the Domino 10 AppDev Pack using NodeRED
   docs:
   - fullDoc-Intro
+  - fullDoc-IntroNodeRed
   - widgets
   - libraries
   - icec

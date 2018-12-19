@@ -1,9 +1,7 @@
 ---
-title: Simplify the use and the access of the Domino 10 AppDev Pack using NodeRED
-permalink: /docs/fullDocumentation/
+title: A new set of APIs
+permalink: /docs/fullDoc-Intro/
 ---
-A new set of APIs
-=================
 
 One of the important news happening with the Domino 10 launch is the
 possibility to use the NodeJS programming model to interact with the
