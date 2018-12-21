@@ -1,4 +1,4 @@
-- title: NodeRED Nodes documentation
+- title: Programming Guide
   docs:
   - fullDoc-Intro
   - fullDoc-IntroNodeRed
@@ -14,49 +14,9 @@
   - fullDoc-TechnicalDetails
 
 
-- title: Overview
+- title: Launch Article
   docs:
-  - widgets
-  - libraries
-  - icec
-  - font-awesome
-
-
-- title: Getting Started
-  docs:
-  - home
-  - clonerepo
-  - startserver
-  - login
-  - navigation
-  - customjs
-  - tips
-
-- title: Hello World
-  docs:
-  - helloworld-home
-
-- title: CSS Grid
-  docs:
-  - cssgrid-home
-  - cssgrid-deploy
-
-- title: Vimeo
-  docs:
-  - vimeo-home
-  - vimeo-deploy
-
-- title: Box
-  docs:
-  - box-home
-  - box-deploy
-  - box-sample
-
-- title: Business Card
-  docs:
-  - businessCard-home
-  - businessCard-deploy
-
-- title: More Info
-  docs:
-  - more-home
+  - article-Intro
+  - article-NodeRed
+  - article-sample
+ 

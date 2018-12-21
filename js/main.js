@@ -12,42 +12,12 @@ $(function() {
   });
 
   $("#ph-2").click(function() {
-    window.location.href = "/node-red-contrib-dominodb-docs/docs/icec/";
+    window.location.href = "/node-red-contrib-dominodb-docs/docs/installation-Intro/";
     return;
   });
 
   $("#ph-3").click(function() {
-    window.location.href = "/node-red-contrib-dominodb-docs/docs/home/";
-    return;
-  });
-
-  $("#ph-4").click(function() {
-    window.location.href = "/node-red-contrib-dominodb-docs/docs/helloworld-home/";
-    return;
-  });
-
-  $("#ph-5").click(function() {
-    window.location.href = "/node-red-contrib-dominodb-docs/docs/cssgrid-home/";
-    return;
-  });
-
-  $("#ph-6").click(function() {
-    window.location.href = "/node-red-contrib-dominodb-docs/docs/vimeo-home/";
-    return;
-  });
-
-  $("#ph-7").click(function() {
-    window.location.href = "/node-red-contrib-dominodb-docs/docs/box-home/";
-    return;
-  });
-
-  $("#ph-8").click(function() {
-    window.location.href = "/node-red-contrib-dominodb-docs/docs/businessCard-home/";
-    return;
-  });
-
-  $("#ph-9").click(function() {
-    window.location.href = "/node-red-contrib-dominodb-docs/docs/more-home/";
+    window.location.href = "/node-red-contrib-dominodb-docs/docs/article-Intro/";
     return;
   });
 
