@@ -1,11 +1,26 @@
-- title: Simplify the use and the access of the Domino 10 AppDev Pack using NodeRED
+- title: NodeRED Nodes documentation
   docs:
   - fullDoc-Intro
   - fullDoc-IntroNodeRed
+  - fullDoc-Details
+  - fullDoc-ConfigurationNode
+  - fullDoc-DocumentMgrNode
+  - fullDoc-GetDocumentsNode
+  - fullDoc-CreateDocumentsNode
+  - fullDoc-ReplaceDocumentsNode
+  - fullDoc-DeleteDocumentsNode
+  - fullDoc-ExplainQueryNode
+  - fullDoc-ErrorHandling
+  - fullDoc-TechnicalDetails
+
+
+- title: Overview
+  docs:
   - widgets
   - libraries
   - icec
   - font-awesome
+
 
 - title: Getting Started
   docs:

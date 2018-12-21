@@ -7,42 +7,47 @@ $(function() {
 
   //DP: Trying something
   $("#ph-1").click(function() {
-    window.location.href = "/icec-widgets-lab/docs/icec/";
+    window.location.href = "/node-red-contrib-dominodb-docs/docs/fullDoc-Intro/";
     return;
   });
 
   $("#ph-2").click(function() {
-    window.location.href = "/icec-widgets-lab/docs/home/";
+    window.location.href = "/node-red-contrib-dominodb-docs/docs/icec/";
     return;
   });
 
   $("#ph-3").click(function() {
-    window.location.href = "/icec-widgets-lab/docs/helloworld-home/";
+    window.location.href = "/node-red-contrib-dominodb-docs/docs/home/";
     return;
   });
 
   $("#ph-4").click(function() {
-    window.location.href = "/icec-widgets-lab/docs/cssgrid-home/";
+    window.location.href = "/node-red-contrib-dominodb-docs/docs/helloworld-home/";
     return;
   });
 
   $("#ph-5").click(function() {
-    window.location.href = "/icec-widgets-lab/docs/vimeo-home/";
+    window.location.href = "/node-red-contrib-dominodb-docs/docs/cssgrid-home/";
     return;
   });
 
   $("#ph-6").click(function() {
-    window.location.href = "/icec-widgets-lab/docs/box-home/";
+    window.location.href = "/node-red-contrib-dominodb-docs/docs/vimeo-home/";
     return;
   });
 
   $("#ph-7").click(function() {
-    window.location.href = "/icec-widgets-lab/docs/businessCard-home/";
+    window.location.href = "/node-red-contrib-dominodb-docs/docs/box-home/";
     return;
   });
 
   $("#ph-8").click(function() {
-    window.location.href = "/icec-widgets-lab/docs/more-home/";
+    window.location.href = "/node-red-contrib-dominodb-docs/docs/businessCard-home/";
+    return;
+  });
+
+  $("#ph-9").click(function() {
+    window.location.href = "/node-red-contrib-dominodb-docs/docs/more-home/";
     return;
   });
 
