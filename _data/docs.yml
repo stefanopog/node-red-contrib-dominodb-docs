@@ -13,10 +13,12 @@
   - fullDoc-ErrorHandling
   - fullDoc-TechnicalDetails
 
-
 - title: Launch Article
   docs:
   - article-Intro
   - article-NodeRed
   - article-sample
- 
+
+- title: Environment Setup
+  docs:
+  - envSetup
