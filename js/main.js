@@ -12,12 +12,12 @@ $(function() {
   });
 
   $("#ph-2").click(function() {
-    window.location.href = "/node-red-contrib-dominodb-docs/docs/installation-Intro/";
+    window.location.href = "/node-red-contrib-dominodb-docs/docs/article-Intro/";
     return;
   });
 
   $("#ph-3").click(function() {
-    window.location.href = "/node-red-contrib-dominodb-docs/docs/article-Intro/";
+    window.location.href = "/node-red-contrib-dominodb-docs/docs/envSetup/";
     return;
   });
 
