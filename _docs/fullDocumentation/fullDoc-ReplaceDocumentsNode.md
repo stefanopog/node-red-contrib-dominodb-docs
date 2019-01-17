@@ -70,7 +70,8 @@ If you want to replace items within documents by specifying a **DQL Query**, you
 
 ![](../images/fullDocumentation/image26.png)
 
-You can specify a valid **DQL Query** (in the above picture `'nodejs'.status = 'pending'` ) and a comma-separated list of **itemName=itemValue** pairs (in the above picture `customer="Mickey", amount=123`). The comma-separated list of **itemName=itemValue** pairs contains the items that will be replaced for all Documents matching the DQL query.
+You can specify a valid **DQL Query** (in the above picture `'nodejs'.status = 'pending'` ) and a comma-separated list of **itemName = "itemValue"** pairs (in the above picture `customer="Mickey", amount=123`). The comma-separated list of **itemName = "itemValue"** pairs contains the items that will be replaced for all Documents matching the DQL query.<br>
+Note that the **itemValue** needs to be <b style="color:red">mandatorily</b> included in single or double quotes (unlike the picture above)
 
 -   The *DQL Query input* can be left empty in the editor. You can use the `msg.DDB_query` input attribute to provide the information at runtime.
 
@@ -91,8 +92,8 @@ You can specify a valid **DQL Query** (in the above picture `'nodejs'.status = '
         -   The *start* and *count* parameters can also be specified bythe incoming `msg.DDB_startValue` and `msg.DDB_countValue`.<br/>
             The values in the configuration panel override the incoming values.
 
-    -   ** ---set from DDB_displayResults-- **<br/>
-        The incoming `msg.DDB_displayResults` can be used to provide the information at runtime. Valid values are "**Default**", "**All**" and "**byPage**".
+    -   **set from DDB_displayResults**<br/>
+         The incoming `msg.DDB_displayResults` can be used to provide the information at runtime. Valid values are "**Default**", "**All**" and "**byPage**".
 
 -   In the picture below, we are using *Defaults Options* for the query. You can override them by unchecking the *Default Options checkbox* and specifying different values for the Max View Entries, Max Documents and Max Milliseconds parameters).<br/>
     ![](../images/fullDocumentation/image14.png)
@@ -106,9 +107,10 @@ If you want to replace items within documents by specifying a list of **unique I
 
 ![](../images/fullDocumentation/image28.png)
 
-You can specify a comma-separated list of **itemName=itemValue** pairs (in the above picture `customer="MICKEY", amount=123`).<br/>
-The *Item Values input* field defines the changed attributes that will apply to all the selected documents.
+You can specify a comma-separated list of **itemName = "itemValue"** pairs (in the above picture `customer="MICKEY", amount=123`).<br>
+Note that the **itemValue** needs to be <b style="color:red">mandatorily</b> included in single or double quotes (unlike the picture above)
 
+-   The *Item Values input* field defines the changed attributes that will apply to all the selected documents.
 -   The *Item Values input* can be left empty in the editor. You can use the `msg.DDB_itemValues` input attribute (which is an array of JSON objects formatted in the following way:<br/>
     ![](../images/fullDocumentation/image27.png)
 
@@ -122,7 +124,6 @@ Here below is a simple example of how this attribute can be built by a **Functio
 
 ![](../images/fullDocumentation/image25.png)
 
-##### 
 
 ##### Controlling the behavior and appearance of your instance
 
