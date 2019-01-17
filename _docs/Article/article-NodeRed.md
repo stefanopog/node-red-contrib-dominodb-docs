@@ -25,4 +25,4 @@ The list of available nodes is shown under the **Domino 10** Category on the lef
 This simple set of nodes can be used to quickly and safely access to, virtually, all the APIs exposed by the "**domino-db NPM" component**. <br />
 The **"domino-db NPM" component** is a pre-requisite for the Node-RED package and needs to be installed before the **node-red-contrib-dominodb** Node-RED package is downloaded (please refer to the *Installation section* of the package for details).
 
-See the [Programming Guide](/docs/fullDoc-Intro/) on this site for detailed explanations of each available node. 
+See the [Programming Guide](../fullDoc-Intro/) on this site for detailed explanations of each available node. 
