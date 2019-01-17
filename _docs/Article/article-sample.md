@@ -88,7 +88,7 @@ We added a **Function Node** named *"Extract Seller"*.
 This node contains a simple Javascript fragment to:
 -   Extract the *seller* and *@unid* information from each of the results coming from the **"My Quotes App" node**
 -   Create an object (outMsg) that will be passed to the IBM Connections **Get Profiles node**.<br />
-    Actually the outMsg.DDB\_unid attribute is inserted in order for the Get Profiles node to transparently pass it further: we will need this information to update the Domino record later!
+    Actually the `outMsg.DDB_unid` attribute is inserted in order for the Get Profiles node to transparently pass it further: we will need this information to update the Domino record later!
 
 We also added an IBM Connections **Get Profile node** which is configured in this way:
 
@@ -120,18 +120,18 @@ We added a **Function node** (named "*Extract Name*") which is configured as fol
 
 ![](../images/article/image16.png)
 
-The msg.DDB\_itemValues adds the *Name* property (with a value coming from the **Get Person Name node**).<br />
+The `msg.DDB_itemValues` adds the *Name* property (with a value coming from the **Get Person Name node**).<br />
 This information is passed to the "**add Name attribute" node** which is configured as follows:
 
 ![](../images/article/image17.png)
 
-This node gets the *Item Values* and the *DocUnid* values from the output of the previous node (msg.DDB\_itemValues and msg.DDB\_unid) and hides the complexity of using the **"domino-db NPM"** API directly!
+This node gets the *Item Values* and the *DocUnid* values from the output of the previous node (`msg.DDB_itemValues` and `msg.DDB_unid`) and hides the complexity of using the **"domino-db NPM"** API directly!
 
 Let's hit the **Deploy button** and execute again the flow (by clicking on the **purple square** on the left of the **Inject node**). The results will be shown here:
 
 ![](../images/article/image18.png)
 
-For each Document in the Domino database, we added the *Name* attribute. The msg.DDB\_doc output attribute (highlighted in the above picture) confirms that a new Name attribute was added to the Domino Document.
+For each Document in the Domino database, we added the *Name* attribute. The `msg.DDB_doc` output attribute (highlighted in the above picture) confirms that a new Name attribute was added to the Domino Document.
 
 Note: we could have done the whole operation in Bulk, but this would have made this simple example a little bit more complex and outside of its scope.
 

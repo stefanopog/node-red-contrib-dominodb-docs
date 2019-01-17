@@ -57,7 +57,7 @@ If you elected to replace entire documents, you will see the following panel:
 
 Apparently, you cannot specify which Documents you actually want to replace. This is normal.<br/>
 Actually, the API that will be used when you elected to be in this situation is the `bulkReplaceDocumentsByUnid API`. This API accepts an array of objects, where each object holds the `@unid` attribute in addition to the name and values of the other items that will be assigned to the new Domino documents that will replace the old ones.<br/>
-It is not really simple to write a complex array of JSON objects in an input text. So, the `msg.DDB\_itemValuesById` input attribute will be used.
+It is not really simple to write a complex array of JSON objects in an input text. So, the `msg.DDB_itemValuesById` input attribute will be used.
 
 Here below is a simple example of how this attribute can be built by a
 **Function Node** and passed to **the Replace Doc/Items node**.
@@ -70,8 +70,8 @@ If you want to replace items within documents by specifying a **DQL Query**, you
 
 ![](../images/fullDocumentation/image26.png)
 
-You can specify a valid **DQL Query** (in the above picture `'nodejs'.status = 'pending'` ) and a comma-separated list of **itemName = "itemValue"** pairs (in the above picture `customer="Mickey", amount=123`). The comma-separated list of **itemName = "itemValue"** pairs contains the items that will be replaced for all Documents matching the DQL query.<br>
-Note that the **itemValue** needs to be <b style="color:red">mandatorily</b> included in single or double quotes (unlike the picture above)
+You can specify a valid **DQL Query** (in the above picture `'nodejs'.status = 'pending'` ) and a comma-separated list of **itemName = "itemValue"** pairs (in the above picture `customer="Mickey", amount='1234'`). The comma-separated list of **itemName = "itemValue"** pairs contains the items that will be replaced for all Documents matching the DQL query.<br>
+Note that the **itemValue** needs to be <b style="color:red">mandatorily</b> included in single or double quotes.
 
 -   The *DQL Query input* can be left empty in the editor. You can use the `msg.DDB_query` input attribute to provide the information at runtime.
 
@@ -107,8 +107,8 @@ If you want to replace items within documents by specifying a list of **unique I
 
 ![](../images/fullDocumentation/image28.png)
 
-You can specify a comma-separated list of **itemName = "itemValue"** pairs (in the above picture `customer="MICKEY", amount=123`).<br>
-Note that the **itemValue** needs to be <b style="color:red">mandatorily</b> included in single or double quotes (unlike the picture above)
+You can specify a comma-separated list of **itemName = "itemValue"** pairs (in the above picture `customer="Mickey", amount='1234'`).<br>
+Note that the **itemValue** needs to be <b style="color:red">mandatorily</b> included in single or double quotes.
 
 -   The *Item Values input* field defines the changed attributes that will apply to all the selected documents.
 -   The *Item Values input* can be left empty in the editor. You can use the `msg.DDB_itemValues` input attribute (which is an array of JSON objects formatted in the following way:<br/>
