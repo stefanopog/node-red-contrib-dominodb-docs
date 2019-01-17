@@ -56,12 +56,8 @@ If you elected to replace entire documents, you will see the following panel:
 ![](../images/fullDocumentation/image24.png)
 
 Apparently, you cannot specify which Documents you actually want to replace. This is normal.<br/>
-Actually, the API that will be used when you elected to be in this situation is the `bulkReplaceDocumentsByUnid API`. This API accepts an array of objects, where each object holds the `@unid` attribute in
-addition to the name and values of the other items that will be assigned
-to the new Domino documents that will replace the old ones.<br/>
-It is not really simple to write a complex array of JSON objects in an
-input text. So, the msg.DDB\_itemValuesById input attribute will be
-used.
+Actually, the API that will be used when you elected to be in this situation is the `bulkReplaceDocumentsByUnid API`. This API accepts an array of objects, where each object holds the `@unid` attribute in addition to the name and values of the other items that will be assigned to the new Domino documents that will replace the old ones.<br/>
+It is not really simple to write a complex array of JSON objects in an input text. So, the `msg.DDB\_itemValuesById` input attribute will be used.
 
 Here below is a simple example of how this attribute can be built by a
 **Function Node** and passed to **the Replace Doc/Items node**.
@@ -70,94 +66,59 @@ Here below is a simple example of how this attribute can be built by a
 
 ##### Replacing Items by Query
 
-If you want to replace items within documents by specifying a **DQL
-Query**, you will see the following panel:
+If you want to replace items within documents by specifying a **DQL Query**, you will see the following panel:
 
 ![](../images/fullDocumentation/image26.png)
 
-You can specify a valid **DQL Query** (in the above picture
-'nodejs'.status = 'pending' ) and a comma-separated list of
-**itemName=itemValue** pairs (in the above picture customer=Mickey,
-amount=123). The comma-separated list of **itemName=itemValue** pairs
-contains the items that will be replaced for all Documents matching the
-DQL query.
+You can specify a valid **DQL Query** (in the above picture `'nodejs'.status = 'pending'` ) and a comma-separated list of **itemName=itemValue** pairs (in the above picture `customer="Mickey", amount=123`). The comma-separated list of **itemName=itemValue** pairs contains the items that will be replaced for all Documents matching the DQL query.
 
--   The *DQL Query input* can be left empty in the editor. You can use
-    the msg.DDB\_query input attribute to provide the information at
-    runtime.
+-   The *DQL Query input* can be left empty in the editor. You can use the `msg.DDB_query` input attribute to provide the information at runtime.
 
--   The *Results selector* allows to define the documents that will be
-    replaced.<br/>
+-   The *Results selector* allows to define the documents that will be replaced.<br/>
     The possible values are:<br/>
     ![](../images/fullDocumentation/image13.png)
 
-    -   ***Default***:<br/>
-        In this case the query will be executed without specifying any
-        *start* and *count* parameters. Only those documents which match
-        the default criteria (from index "0" to index "99") will be
-        replaced
+    -   **Default**:<br/>
+        In this case the query will be executed without specifying any *start* and *count* parameters. Only those documents which match the default criteria (from index "0" to index "99") will be replaced
 
-    -   ***All Documents***<br/>
-        In this case the items for all the documents matching the query
-        will be replaced.<br/>
-        Be aware that this may be a huge number which may make your
-        NodeRED environment getting out of Memory.
+    -   **All Documents**<br/>
+        In this case the items for all the documents matching the query will be replaced.<br/>
+        Be aware that this may be a huge number which may make your NodeRED environment getting out of Memory.
 
-    -   ***By Page***<br/>
-        In this case, you will be asked to specify the *start* and
-        *count* options in order to replace "**count documents starting
-        at the start index**"
+    -   **By Page**<br/>
+        In this case, you will be asked to specify the *start* and *count* options in order to replace "**count documents starting at the start index**"
 
-        -   The *start* and *count* parameters can also be specified by
-            the incoming msg.DDB\_startValue and msg.DDB\_countValue.<br/>
-            The values in the configuration panel override the incoming
-            values.
+        -   The *start* and *count* parameters can also be specified bythe incoming `msg.DDB_startValue` and `msg.DDB_countValue`.<br/>
+            The values in the configuration panel override the incoming values.
 
-    -   ***---set from DDB\_displayResults\--***<br/>
-        The incoming msg.DDB\_displayResults can be used to provide the
-        information at runtime. Valid values are "**Default**",
-        "**All**" and "**byPage**".
+    -   ** ---set from DDB_displayResults-- **<br/>
+        The incoming `msg.DDB_displayResults` can be used to provide the information at runtime. Valid values are "**Default**", "**All**" and "**byPage**".
 
--   In the above picture, we are using *Defaults Options* for the query.
-    You can override them by unchecking the *Default Options checkbox*
-    and specifying different values for the Max View Entries, Max
-    Documents and Max Milliseconds parameters).<br/>
+-   In the picture below, we are using *Defaults Options* for the query. You can override them by unchecking the *Default Options checkbox* and specifying different values for the Max View Entries, Max Documents and Max Milliseconds parameters).<br/>
     ![](../images/fullDocumentation/image14.png)
 
--   The *Item Values input* can be left empty in the editor. You can use
-    the msg.DDB\_itemValues input attribute (which is an array of JSON
-    objects formatted in the following way:<br/>
+-   The *Item Values input* can be left empty in the editor. You can use the `msg.DDB_itemValues` input attribute (which is an array of JSON objects formatted in the following way:<br/>
     ![](../images/fullDocumentation/image27.png)
 
 ##### Replacing Items by Unique Ids
 
-If you want to replace items within documents by specifying a list of
-**unique Ids**, you will see the following panel:
+If you want to replace items within documents by specifying a list of **unique Ids**, you will see the following panel:
 
 ![](../images/fullDocumentation/image28.png)
 
-You can specify a comma-separated list of **itemName=itemValue** pairs
-(in the above picture customer=MICKEY, amount=123).<br/>
-The *Item Values input* field defines the changed attributes that will
-apply to all the selected documents.
+You can specify a comma-separated list of **itemName=itemValue** pairs (in the above picture `customer="MICKEY", amount=123`).<br/>
+The *Item Values input* field defines the changed attributes that will apply to all the selected documents.
 
--   The *Item Values input* can be left empty in the editor. You can use
-    the msg.DDB\_itemValues input attribute (which is an array of JSON
-    objects formatted in the following way:<br/>
+-   The *Item Values input* can be left empty in the editor. You can use the `msg.DDB_itemValues` input attribute (which is an array of JSON objects formatted in the following way:<br/>
     ![](../images/fullDocumentation/image27.png)
 
-In order to provide the list of unique ids for replacing the items, we
-need to go back to the API used in this situation, which is the
-bulkReplaceItemsByUnid API. This API accepts, among other parameters, an
-array of objects, where each object holds the @unid attribute in
-addition to the name and values of the other items that will be assigned
-to the new Domino documents that will replace the old ones.<br/>
-It is not really simple to write a complex array of JSON objects in an
-input text. So, the msg.DDB\_itemValuesById input attribute will be
+In order to provide the list of unique ids for replacing the items, we need to go back to the API used in this situation, which is the 
+`bulkReplaceItemsByUnid` API. This API accepts, among other parameters, an array of objects, where each object holds the `@unid` attribute in
+addition to the name and values of the other items that will be assigned to the new Domino documents that will replace the old ones.<br/>
+It is not really simple to write a complex array of JSON objects in an input text. So, the `msg.DDB_itemValuesById` input attribute will be
 used.
 
-Here below is a simple example of how this attribute can be built by a
-**Function Node** and passed to **the Replace Doc/Items node**.
+Here below is a simple example of how this attribute can be built by a **Function Node** and passed to **the Replace Doc/Items node**.
 
 ![](../images/fullDocumentation/image25.png)
 
@@ -173,16 +134,13 @@ Here below is a simple example of how this attribute can be built by a
 
 ##### Output
 
-If the execution of the node successfully completes, the following
-outputs will be provided:
+If the execution of the node successfully completes, the following outputs will be provided:
 
 ![](../images/fullDocumentation/image29.png)
 
-The DDB\_docs array provides a list of Unique Ids representing the
-documents that have been deleted or the items of which have been
+The `msg.DDB_docs` array provides a list of Unique Ids representing the documents that have been deleted or the items of which have been
 deleted.
 
-The DDB\_result object contains the additional outputs provided by the
-API, including the total number of documents matching the query, the
+The `msg.DDB_result` object contains the additional outputs provided by the API, including the total number of documents matching the query, the
 start index and the count value.<br/>
 ![](../images/fullDocumentation/image19.png)
